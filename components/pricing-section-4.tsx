@@ -7,7 +7,7 @@ const SparklesComp = dynamic(
   { ssr: false }
 );
 import { TimelineContent } from "@/components/ui/timeline-animation";
-import {VerticalCutReveal} from "@/components/ui/vertical-cut-reveal";
+// import {VerticalCutReveal} from "@/components/ui/vertical-cut-reveal";
 import { cn } from "@/lib/utils";
 import { motion } from "framer-motion";
 import { useEffect, useRef, useState } from "react";
@@ -238,7 +238,7 @@ export default function PricingSection6() {
                 {"icon" in plan && (
                   <div className="mt-2 sm:mt-4 flex justify-center">
                     <Image 
-                      src={(plan as any).icon} 
+                      src={(plan as unknown as { icon: string }).icon}
                       alt={plan.name} 
                       width={48} 
                       height={48} 

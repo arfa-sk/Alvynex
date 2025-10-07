@@ -34,7 +34,25 @@ const RippleGrid: React.FC<Props> = ({
   const mousePositionRef = useRef({ x: 0.5, y: 0.5 });
   const targetMouseRef = useRef({ x: 0.5, y: 0.5 });
   const mouseInfluenceRef = useRef(0);
-  const uniformsRef = useRef<any>(null);
+      type Uniforms = {
+        iTime: { value: number };
+        iResolution: { value: [number, number] };
+        enableRainbow: { value: boolean };
+        gridColor: { value: [number, number, number] };
+        rippleIntensity: { value: number };
+        gridSize: { value: number };
+        gridThickness: { value: number };
+        fadeDistance: { value: number };
+        vignetteStrength: { value: number };
+        glowIntensity: { value: number };
+        opacity: { value: number };
+        gridRotation: { value: number };
+        mouseInteraction: { value: boolean };
+        mousePosition: { value: [number, number] };
+        mouseInfluence: { value: number };
+        mouseInteractionRadius: { value: number };
+      };
+      const uniformsRef = useRef<Uniforms | null>(null);
 
   useEffect(() => {
     if (!containerRef.current) return;
@@ -170,9 +188,9 @@ void main() {
     gl_FragColor = vec4(color * t * finalFade * opacity, alpha);
 }`;
 
-    const uniforms = {
-      iTime: { value: 0 },
-      iResolution: { value: [1, 1] },
+        const uniforms: Uniforms = {
+          iTime: { value: 0 },
+          iResolution: { value: [1, 1] as [number, number] },
       enableRainbow: { value: enableRainbow },
       gridColor: { value: hexToRgb(gridColor) },
       rippleIntensity: { value: rippleIntensity },
@@ -184,7 +202,7 @@ void main() {
       opacity: { value: opacity },
       gridRotation: { value: gridRotation },
       mouseInteraction: { value: mouseInteraction },
-      mousePosition: { value: [0.5, 0.5] },
+          mousePosition: { value: [0.5, 0.5] as [number, number] },
       mouseInfluence: { value: 0 },
       mouseInteractionRadius: { value: mouseInteractionRadius }
     };
@@ -198,7 +216,7 @@ void main() {
         const resize = () => {
       const { clientWidth: w, clientHeight: h } = containerRef.current!;
       renderer.setSize(w, h);
-      uniforms.iResolution.value = [w, h];
+          uniforms.iResolution.value = [w, h] as [number, number];
     };
 
         // Observe container size changes to keep canvas in sync
@@ -266,8 +284,8 @@ void main() {
     };
   }, []);
 
-  useEffect(() => {
-    if (!uniformsRef.current) return;
+      useEffect(() => {
+        if (!uniformsRef.current) return;
 
     const hexToRgb = (hex: string): [number, number, number] => {
       const result = /^#?([a-f\d]{2})([a-f\d]{2})([a-f\d]{2})$/i.exec(hex);
@@ -288,20 +306,7 @@ void main() {
     uniformsRef.current.gridRotation.value = gridRotation;
     uniformsRef.current.mouseInteraction.value = mouseInteraction;
     uniformsRef.current.mouseInteractionRadius.value = mouseInteractionRadius;
-  }, [
-    enableRainbow,
-    gridColor,
-    rippleIntensity,
-    gridSize,
-    gridThickness,
-    fadeDistance,
-    vignetteStrength,
-    glowIntensity,
-    opacity,
-    gridRotation,
-    mouseInteraction,
-    mouseInteractionRadius
-  ]);
+      }, [enableRainbow, gridColor, rippleIntensity, gridSize, gridThickness, fadeDistance, vignetteStrength, glowIntensity, opacity, gridRotation, mouseInteraction, mouseInteractionRadius]);
 
       return (
         <div

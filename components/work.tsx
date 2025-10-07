@@ -1,6 +1,6 @@
 'use client';
 
-import { motion } from 'framer-motion';
+// import { motion } from 'framer-motion';
 import { useEffect, useRef, useState } from 'react';
 import { TimelineContent } from '@/components/ui/timeline-animation';
 
@@ -49,7 +49,7 @@ export default function Work() {
       v.src = src;
       v.muted = true;
       v.setAttribute('muted','');
-      (v as any).playsInline = true;
+      (v as HTMLVideoElement & { playsInline?: boolean }).playsInline = true;
       v.setAttribute('playsinline','');
       v.preload = 'auto';
       v.crossOrigin = 'anonymous';

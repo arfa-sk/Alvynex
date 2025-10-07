@@ -22,7 +22,7 @@ export default function Contact() {
     <section
       id="contact"
       className="relative pt-20 pb-0 px-6 flex flex-col items-center bg-hero-gradient text-white overflow-hidden"
-      ref={contactRef as any}
+      ref={contactRef}
     >
       {/* Cinematic vignette with ultra-dark blacks */}
       <div className="pointer-events-none absolute inset-0 -z-10">
