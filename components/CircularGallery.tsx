@@ -223,6 +223,7 @@ class Media {
   mix: number = 0; // 0 = poster, 1 = video
   fadeStart: number = 0;
   fading: boolean = false;
+  hasRVFC: boolean = false;
 
   constructor({
     geometry,
@@ -397,6 +398,7 @@ class Media {
         // Use requestVideoFrameCallback when available for smooth updates
         const useRVFC = (video as any).requestVideoFrameCallback && typeof (video as any).requestVideoFrameCallback === 'function';
         if (useRVFC) {
+          this.hasRVFC = true;
           const schedule = () => {
             (video as any).requestVideoFrameCallback(() => {
               (this.texture as any).needsUpdate = true;
@@ -478,7 +480,7 @@ class Media {
         if (this.video.paused) {
           this.video.play().catch(() => {});
         }
-        if (this.video.readyState >= 2) {
+        if (this.video.readyState >= 2 && !this.hasRVFC) {
           const now = performance.now();
           if (now - this.lastTexUpdateMs > 33) { // ~30fps texture uploads
             (this.texture as any).needsUpdate = true;

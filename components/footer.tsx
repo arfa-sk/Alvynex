@@ -17,14 +17,14 @@ export default function Footer() {
         <div className="absolute inset-0 bg-black pointer-events-none" />
         <RippleGrid
           enableRainbow={false}
-          gridColor="#2c0202"
-          rippleIntensity={0.01}
+          gridColor="#121013"
+          rippleIntensity={0.0}
           gridSize={4}
           gridThickness={21}
           fadeDistance={0.2}
           vignetteStrength={5}
-          glowIntensity={0.1}
-          opacity={10}
+          glowIntensity={0.0}
+          opacity={9}
           gridRotation={0}
           mouseInteraction={false}
           mouseInteractionRadius={0.2}

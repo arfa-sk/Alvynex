@@ -69,14 +69,12 @@ export default function CEO() {
           </TimelineContent>
 
           <TimelineContent as="p" animationNum={3} timelineRef={timelineRef} className="text-lg text-gray-100/95 max-w-xl leading-relaxed">
-            We craft content that <span className="scotch-emph">earns trust</span> and
-            turns attention into measurable growth. Strategy, creative and
-            consistency—nothing extra.
+          We build content that converts attention into leads and measurable growth. Smart strategy. Sharp execution. No fluff.
           </TimelineContent>
 
           <TimelineContent as="blockquote" animationNum={4} timelineRef={timelineRef} className="relative pl-4 border-l-2 border-[hsl(var(--primary)/0.35)] text-white/90">
             <span className="scotch-emph">
-              “Consistency beats virality. Systems win.”
+              “It’s not about virality it’s about results.”
             </span>
           </TimelineContent>
 

@@ -193,7 +193,7 @@ export default function PricingSection6() {
         </h2>
         </TimelineContent>
         <TimelineContent animationNum={1} timelineRef={pricingRef}>
-          <p className="text-lg sm:text-xl md:text-2xl lg:text-3xl xl:text-4xl tracking-[-0.01em] scotch-emph text-primary text-center">
+          <p className="text-lg sm:text-xl md:text-2xl lg:text-3xl xl:text-4xl tracking-[-0.01em] scotch-emph text-primary text-center md:mt-10 lg:mt-14 xl:mt-16">
             You perform. We perfect.
           </p>
         </TimelineContent>
@@ -226,9 +226,9 @@ export default function PricingSection6() {
               className="will-change-transform"
             >
               <Card
-                className="relative text-white border-neutral-800 bg-gradient-to-r from-neutral-900 via-neutral-800 to-neutral-900 h-full rounded-2xl sm:rounded-3xl shadow-[0_0_0_rgba(0,0,0,0)] hover:shadow-[0_20px_60px_rgba(0,0,0,0.35)] transition-shadow duration-300"
+                className="relative text-white border-neutral-800 bg-gradient-to-r from-neutral-900 via-neutral-800 to-neutral-900 h-full md:min-h-[28rem] lg:min-h-[30rem] xl:min-h-[32rem] rounded-2xl sm:rounded-3xl shadow-[0_0_0_rgba(0,0,0,0)] hover:shadow-[0_20px_60px_rgba(0,0,0,0.35)] transition-shadow duration-300 flex flex-col"
               >
-              <CardHeader className="text-center p-4 sm:p-6 lg:p-8">
+              <CardHeader className="text-center p-4 sm:p-6 lg:p-8 flex-1 flex flex-col">
                 {/* Step button at the top */}
                 <div className="mb-4 sm:mb-6">
                   <button
@@ -256,7 +256,7 @@ export default function PricingSection6() {
                 <p className="text-xs sm:text-sm lg:text-base xl:text-lg text-white mb-4 sm:mb-6 scotch-emph text-center leading-relaxed px-2 sm:px-0">{plan.description}</p>
               </CardHeader>
 
-              <CardContent className="pt-0">
+              <CardContent className="pt-0 mt-auto">
                 {/* Feature list removed per request */}
               </CardContent>
               </Card>

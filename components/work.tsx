@@ -62,10 +62,10 @@ export default function Work() {
   }, []);
   // ====== VIDEO LISTS ======
   const longForm: { src: string; title: string; tags: string[] }[] = [
-    { src: 'https://res.cloudinary.com/dud14cvre/video/upload/f_auto,q_auto/v1759841745/lf1_qrheog.mp4', title: "Here's Why America Will Collapse In Less Than 50 Years", tags: ['Scripting', 'Ideation', 'Editing'] },
-    { src: 'https://res.cloudinary.com/dud14cvre/video/upload/f_auto,q_auto/v1759841705/lf2_p1osvq.mp4', title: "This Scalping Strategy Made Me $28,000 in 30 Days!", tags: ['Scripting', 'Ideation', 'Editing', 'SEO'] },
-    { src: 'https://res.cloudinary.com/dud14cvre/video/upload/f_auto,q_auto/v1759842295/lf3_cybkdc.mp4', title: 'The Guy Behind Anime Blades... (Organic Drop Shipping)', tags: ['Ideation', 'Editing', 'SEO', 'Thumbnails'] },
-    { src: 'https://res.cloudinary.com/dud14cvre/video/upload/f_auto,q_auto/v1759841869/lf4_rh919j.mp4', title: 'Organic Dropshipping Masterclass (6+ Hour FREE COURSE)', tags: ['Ideation', 'Editing', 'Thumbnails'] },
+    { src: 'https://res.cloudinary.com/dud14cvre/video/upload/f_auto,q_auto/v1759841745/lf1_qrheog.mp4', title: "Roadmap to start Dropshipping in 2026", tags: ['Scripting', 'Ideation', 'Editing'] },
+    { src: 'https://res.cloudinary.com/dud14cvre/video/upload/f_auto,q_auto/v1759841705/lf2_p1osvq.mp4', title: "How to use Amazon Seller Account to Print Money", tags: ['Scripting', 'Ideation', 'Editing', 'SEO'] },
+    { src: 'https://res.cloudinary.com/dud14cvre/video/upload/f_auto,q_auto/v1759842295/lf3_cybkdc.mp4', title: 'The Only Sales Technique You need to know', tags: ['Ideation', 'Editing', 'SEO', 'Thumbnails'] },
+    { src: 'https://res.cloudinary.com/dud14cvre/video/upload/f_auto,q_auto/v1759841869/lf4_rh919j.mp4', title: 'How to earn dollars by just making landing pages', tags: ['Ideation', 'Editing', 'Thumbnails'] },
   ];
 
   const shortForm = [
