@@ -219,9 +219,15 @@ export default function PricingSection6() {
             timelineRef={pricingRef}
             customVariants={revealVariants}
           >
-            <Card
-              className="relative text-white border-neutral-800 bg-gradient-to-r from-neutral-900 via-neutral-800 to-neutral-900 h-full rounded-2xl sm:rounded-3xl"
+            <motion.div
+              whileHover={{ scale: 1.03, y: -6 }}
+              whileTap={{ scale: 0.98 }}
+              transition={{ type: "spring", stiffness: 500, damping: 28 }}
+              className="will-change-transform"
             >
+              <Card
+                className="relative text-white border-neutral-800 bg-gradient-to-r from-neutral-900 via-neutral-800 to-neutral-900 h-full rounded-2xl sm:rounded-3xl shadow-[0_0_0_rgba(0,0,0,0)] hover:shadow-[0_20px_60px_rgba(0,0,0,0.35)] transition-shadow duration-300"
+              >
               <CardHeader className="text-center p-4 sm:p-6 lg:p-8">
                 {/* Step button at the top */}
                 <div className="mb-4 sm:mb-6">
@@ -253,7 +259,8 @@ export default function PricingSection6() {
               <CardContent className="pt-0">
                 {/* Feature list removed per request */}
               </CardContent>
-            </Card>
+              </Card>
+            </motion.div>
           </TimelineContent>
         ))}
       </div>
