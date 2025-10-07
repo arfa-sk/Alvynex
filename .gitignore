@@ -39,3 +39,14 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+@"
+node_modules/
+.next/
+out/
+dist/
+.env
+.env.local
+*.log
+.DS_Store
+"@ | Set-Content -Encoding UTF8 .gitignore
