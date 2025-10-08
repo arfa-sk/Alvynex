@@ -3,6 +3,7 @@
 import { useEffect, useState } from "react"
 import type { JSX } from "react"
 import Link from "next/link"
+import Image from "next/image"
 import { motion } from "framer-motion"
 import clsx from "clsx"
 import { Briefcase, Wrench, Info, Mail } from "lucide-react"
@@ -53,8 +54,15 @@ export default function Navbar(): JSX.Element {
           scrolled ? "bg-black/70 backdrop-blur-md" : "bg-transparent"
         )}
       >
-        <Link href="/" className="pointer-events-auto text-2xl font-sans font-bold text-white">
-          Alvynex
+        <Link href="/" className="pointer-events-auto">
+          <Image
+            src="/images/logo.png"
+            alt="Alvynex"
+            width={160}
+            height={60}
+            className="h-12 w-auto"
+            priority
+          />
         </Link>
 
         {/* Floating pill nav (bottom-right on mobile, inline on desktop) */}

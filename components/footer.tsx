@@ -2,6 +2,7 @@
 
 import { motion } from "framer-motion";
 import Link from "next/link";
+import Image from "next/image";
 import { Mail, Instagram, Linkedin } from "lucide-react";
 import RippleGrid from './RippleGrid';
 import { useRef } from "react";
@@ -46,8 +47,15 @@ export default function Footer() {
             viewport={{ once: true }}
             className="space-y-4"
             >
-              <TimelineContent as="h3" animationNum={0} timelineRef={timelineRef} className="text-3xl sm:text-4xl lg:text-5xl font-bold text-white mb-4 sm:mb-6" style={{ fontFamily: 'Helvetica, Arial, sans-serif' }}>
-                Alvynex
+              <TimelineContent as="div" animationNum={0} timelineRef={timelineRef} className="mb-4 sm:mb-6">
+                <Image
+                  src="/images/logo.png"
+                  alt="Alvynex"
+                  width={200}
+                  height={80}
+                  className="h-12 sm:h-16 lg:h-20 w-auto"
+                  priority
+                />
               </TimelineContent>
                 {/* Icons under brand title */}
                 <TimelineContent animationNum={1} timelineRef={timelineRef} className="flex items-center gap-4 sm:gap-6">
