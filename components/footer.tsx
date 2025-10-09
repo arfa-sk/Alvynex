@@ -20,7 +20,7 @@ export default function Footer() {
           enableRainbow={false}
           gridColor="#121013"
           rippleIntensity={0.0}
-          gridSize={4}
+          gridSize={7}
           gridThickness={21}
           fadeDistance={0.2}
           vignetteStrength={5}

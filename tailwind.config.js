@@ -92,15 +92,8 @@ module.exports = {
 		  highlight: ["var(--font-playfair)", "serif"],
 		},
 		backgroundImage: {
-			"hero-gradient":
-			  // Layered cinematic radial gradients
-			  "radial-gradient(58% 50% at 50% 30%, hsl(var(--primary)/0.25) 0%, transparent 65%), " +
-			  "radial-gradient(88% 70% at 50% 42%, hsl(var(--primary)/0.15) 0%, transparent 78%), " +
-			  "radial-gradient(32% 28% at 50% 34%, hsl(var(--foreground)/0.08) 0%, transparent 60%), " +
-			  "linear-gradient(to bottom, rgba(0,0,0,1) 0%, rgba(40,0,15,0.8) 50%, rgba(180,20,20,0.12) 100%)",
-			"hero-vignette":
-			  "radial-gradient(95% 95% at 50% 45%, transparent 60%, rgba(0,0,0,0.88) 100%)",
-		  },
+			// All gradients now use inline styles for better control
+		},
 		  
 		boxShadow: {
 		  'hero-glow': '0 0 28px rgba(255, 0, 20, 0.45), 0 0 56px rgba(255, 0, 20, 0.2)',

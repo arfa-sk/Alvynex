@@ -140,6 +140,8 @@ html {
 /* Promote drawables to their own layers for mobile smoothness */
 canvas, video { will-change: transform, opacity; }
 
+/* Modern gradient syntax support */
+
 html.lenis {
   height: auto;
 }

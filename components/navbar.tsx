@@ -21,17 +21,29 @@ const NAV_ITEMS: NavItem[] = [
 export default function Navbar(): JSX.Element {
   const [active, setActive] = useState<string>(NAV_ITEMS[0].name)
   const [isMobile, setIsMobile] = useState<boolean>(false)
-  const [scrolled, setScrolled] = useState<boolean>(false)
   const [visible, setVisible] = useState<boolean>(true)
+  const [lastScrollY, setLastScrollY] = useState<number>(0)
 
   useEffect(() => {
     const onResize = () => setIsMobile(window.innerWidth < 768)
     const onScroll = () => {
-      const y = window.scrollY
-      setScrolled(y > 24)
-      // Hide navbar after leaving hero (~90vh)
-      const hideAfter = Math.max(window.innerHeight * 0.9, 560)
-      setVisible(y < hideAfter)
+      const currentScrollY = window.scrollY
+      const heroHeight = window.innerHeight
+      
+      // Always show navbar when at the very top
+      if (currentScrollY < 50) {
+        setVisible(true)
+      }
+      // Hide navbar when scrolling down past hero section
+      else if (currentScrollY > heroHeight * 0.8) {
+        setVisible(false)
+      }
+      // Show navbar when scrolling up (even in other sections)
+      else if (currentScrollY < lastScrollY) {
+        setVisible(true)
+      }
+      
+      setLastScrollY(currentScrollY)
     }
     onResize()
     onScroll()
@@ -41,19 +53,14 @@ export default function Navbar(): JSX.Element {
       window.removeEventListener("resize", onResize)
       window.removeEventListener("scroll", onScroll)
     }
-  }, [])
+  }, [lastScrollY])
 
   return (
     <header className={clsx(
       "fixed top-0 left-0 right-0 z-40 transition-transform duration-300 pointer-events-none",
       visible ? "translate-y-0" : "-translate-y-full"
     )}>
-      <div
-        className={clsx(
-          "mx-auto flex max-w-7xl items-center justify-between px-6 py-4 transition-colors",
-          scrolled ? "bg-black/70 backdrop-blur-md" : "bg-transparent"
-        )}
-      >
+      <div className="mx-auto flex max-w-7xl items-center justify-between px-6 py-4">
         <Link href="/" className="pointer-events-auto">
           <Image
             src="/images/logo.png"
