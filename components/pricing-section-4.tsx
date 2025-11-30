@@ -135,21 +135,21 @@ export default function PricingSection6() {
       style={{ fontFamily: "Helvetica, Arial, sans-serif" }}
     >
       {!isMobile && (
-        <TimelineContent
-          animationNum={4}
-          timelineRef={pricingRef}
-          customVariants={revealVariants}
+      <TimelineContent
+        animationNum={4}
+        timelineRef={pricingRef}
+        customVariants={revealVariants}
           className="absolute top-0 h-96 w-full overflow-hidden [mask-image:radial-gradient(50%_50%,white,transparent)]"
-        >
-          <div className="absolute bottom-0 left-0 right-0 top-0 bg-[linear-gradient(to_right,#ffffff2c_1px,transparent_1px),linear-gradient(to_bottom,#3a3a3a01_1px,transparent_1px)] bg-[size:70px_80px] "></div>
-          <SparklesComp
-            density={1800}
-            direction="bottom"
-            speed={1}
+      >
+        <div className="absolute bottom-0 left-0 right-0 top-0 bg-[linear-gradient(to_right,#ffffff2c_1px,transparent_1px),linear-gradient(to_bottom,#3a3a3a01_1px,transparent_1px)] bg-[size:70px_80px] "></div>
+        <SparklesComp
+          density={1800}
+          direction="bottom"
+          speed={1}
             color="var(--sparkles-color)"
-            className="absolute inset-x-0 bottom-0 h-full w-full [mask-image:radial-gradient(50%_50%,white,transparent_85%)]"
-          />
-        </TimelineContent>
+          className="absolute inset-x-0 bottom-0 h-full w-full [mask-image:radial-gradient(50%_50%,white,transparent_85%)]"
+        />
+      </TimelineContent>
       )}
       {/* Subtle black vignette to soften red ambient */}
       <div className="pointer-events-none absolute inset-0 z-10 bg-[radial-gradient(95%_95%_at_50%_40%,transparent_55%,rgba(0,0,0,0.92)_100%)]" />
@@ -224,8 +224,8 @@ export default function PricingSection6() {
               whileTap={{ scale: 0.98 }}
               transition={{ type: "spring", stiffness: 500, damping: 28 }}
               className="will-change-transform"
-            >
-              <Card
+          >
+            <Card
                 className="relative text-white border-neutral-800 bg-gradient-to-r from-neutral-900 via-neutral-800 to-neutral-900 h-full md:min-h-[28rem] lg:min-h-[30rem] xl:min-h-[32rem] rounded-2xl sm:rounded-3xl shadow-[0_0_0_rgba(0,0,0,0)] hover:shadow-[0_20px_60px_rgba(0,0,0,0.35)] transition-shadow duration-300 flex flex-col"
               >
               <CardHeader className="text-center p-4 sm:p-6 lg:p-8 flex-1 flex flex-col">
@@ -259,7 +259,7 @@ export default function PricingSection6() {
               <CardContent className="pt-0 mt-auto">
                 {/* Feature list removed per request */}
               </CardContent>
-              </Card>
+            </Card>
             </motion.div>
           </TimelineContent>
         ))}

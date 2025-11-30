@@ -50,7 +50,7 @@ export default function Footer() {
               <TimelineContent as="div" animationNum={0} timelineRef={timelineRef} className="mb-4 sm:mb-6">
                 <Image
                   src="/images/logo.png"
-                  alt="Alvynex"
+                  alt="Alvynx"
                   width={200}
                   height={80}
                   className="h-12 sm:h-16 lg:h-20 w-auto"
@@ -61,7 +61,7 @@ export default function Footer() {
                 <TimelineContent animationNum={1} timelineRef={timelineRef} className="flex items-center gap-4 sm:gap-6">
                   <Link 
                     href="mailto:alwanfx11@gmail.com"
-                    aria-label="Email Alvynex"
+                    aria-label="Email Alvynx"
                     title="Email"
                     className="inline-flex items-center justify-center w-10 h-10 sm:w-12 sm:h-12 rounded-full bg-gradient-to-r from-[#5a0d17] to-[#7a0f1b] text-white transition-transform duration-300 hover:scale-110 shadow-lg"
                   >
@@ -126,7 +126,7 @@ export default function Footer() {
                   className="text-gray-400 text-sm"
                   style={{ fontFamily: 'Helvetica, Arial, sans-serif' }}
                 >
-                  © 2025 Alvynex. All rights reserved.
+                  © 2025 Alvynx. All rights reserved.
                 </p>
               </div>
               <div className="mt-2 flex justify-center items-center gap-2 text-gray-400 text-xs" style={{ fontFamily: 'Helvetica, Arial, sans-serif' }}>

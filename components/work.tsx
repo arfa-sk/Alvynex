@@ -208,8 +208,7 @@ function LongFormCard({ src, title, tags, timelineRef, itemIndex = 0 }: { src: s
             }}
             onMouseLeave={(e) => e.currentTarget.pause()}
             onLoadStart={() => setReady(true)}
-            onError={(e) => { 
-              console.error('Video load error:', e); 
+            onError={() => { 
               setReady(true); 
             }}
           />

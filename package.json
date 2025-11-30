@@ -32,6 +32,8 @@
     "three": "^0.180.0"
   },
   "devDependencies": {
+    "@21st-extension/react": "^0.5.14",
+    "@21st-extension/toolbar-next": "^0.5.14",
     "@eslint/eslintrc": "^3",
     "@types/node": "^20",
     "@types/react": "^19",

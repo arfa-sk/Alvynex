@@ -64,17 +64,17 @@ const RippleGrid: React.FC<Props> = ({
         : [1, 1, 1];
     };
 
-        const renderer = new Renderer({
+    const renderer = new Renderer({
           dpr: Math.min(window.devicePixelRatio || 1, 2),
           alpha: true,
           premultipliedAlpha: false,
           antialias: false
-        });
-        const gl = renderer.gl;
+    });
+    const gl = renderer.gl;
     gl.enable(gl.BLEND);
-        gl.blendFunc(gl.SRC_ALPHA, gl.ONE_MINUS_SRC_ALPHA);
-        gl.canvas.style.width = '100%';
-        gl.canvas.style.height = '100%';
+    gl.blendFunc(gl.SRC_ALPHA, gl.ONE_MINUS_SRC_ALPHA);
+    gl.canvas.style.width = '100%';
+    gl.canvas.style.height = '100%';
         gl.canvas.style.position = 'absolute';
         gl.canvas.style.inset = '0';
         // Ensure a solid black clear to avoid flashing white backgrounds
@@ -83,7 +83,7 @@ const RippleGrid: React.FC<Props> = ({
         while (containerRef.current.firstChild) {
           containerRef.current.removeChild(containerRef.current.firstChild as Node);
         }
-        containerRef.current.appendChild(gl.canvas);
+    containerRef.current.appendChild(gl.canvas);
         // Ensure a solid black clear to avoid flashing white backgrounds
         gl.clearColor(0, 0, 0, 1);
 
@@ -189,7 +189,7 @@ void main() {
 }`;
 
         const uniforms: Uniforms = {
-          iTime: { value: 0 },
+      iTime: { value: 0 },
           iResolution: { value: [1, 1] as [number, number] },
       enableRainbow: { value: enableRainbow },
       gridColor: { value: hexToRgb(gridColor) },
@@ -213,7 +213,7 @@ void main() {
     const program = new Program(gl, { vertex: vert, fragment: frag, uniforms });
     const mesh = new Mesh(gl, { geometry, program });
 
-        const resize = () => {
+    const resize = () => {
       const { clientWidth: w, clientHeight: h } = containerRef.current!;
       renderer.setSize(w, h);
           uniforms.iResolution.value = [w, h] as [number, number];
@@ -271,7 +271,7 @@ void main() {
 
     requestAnimationFrame(render);
 
-        return () => {
+    return () => {
       window.removeEventListener('resize', resize);
       if (mouseInteraction && containerRef.current) {
         containerRef.current.removeEventListener('mousemove', handleMouseMove);
@@ -284,8 +284,8 @@ void main() {
     };
   }, []);
 
-      useEffect(() => {
-        if (!uniformsRef.current) return;
+  useEffect(() => {
+    if (!uniformsRef.current) return;
 
     const hexToRgb = (hex: string): [number, number, number] => {
       const result = /^#?([a-f\d]{2})([a-f\d]{2})([a-f\d]{2})$/i.exec(hex);

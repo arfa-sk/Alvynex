@@ -44,17 +44,17 @@ export default function Contact() {
       {/* Heading with timeline animation */}
       <div className="relative z-10 max-w-2xl text-center mb-4">
         <TimelineContent animationNum={0} timelineRef={contactRef} className="">
-          <h2 className="text-4xl md:text-5xl font-bold tracking-[-0.02em] leading-tight mb-4 font-sans text-white hero-glow">
+        <h2 className="text-4xl md:text-5xl font-bold tracking-[-0.02em] leading-tight mb-4 font-sans text-white hero-glow">
             <span className="font-sans text-white hero-glow">Let’s</span>{" "}
             <span className="scotch-emph text-primary">Build</span>{" "}
-            <span className="font-sans text-white hero-glow">Something</span>
-          </h2>
+          <span className="font-sans text-white hero-glow">Something</span>
+        </h2>
         </TimelineContent>
         <TimelineContent animationNum={1} timelineRef={contactRef} className="">
-          <p className="text-gray-100 md:text-xl tracking-[-0.01em] leading-snug hero-glow drop-shadow-[0_2px_10px_rgba(0,0,0,0.7)]">
+        <p className="text-gray-100 md:text-xl tracking-[-0.01em] leading-snug hero-glow drop-shadow-[0_2px_10px_rgba(0,0,0,0.7)]">
             Book a free vision call to discuss your goals and craft a plan that
-            generates inbound leads and scales your brand.
-          </p>
+          generates inbound leads and scales your brand.
+        </p>
         </TimelineContent>
       </div>
 

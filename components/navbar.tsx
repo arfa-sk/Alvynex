@@ -64,10 +64,10 @@ export default function Navbar(): JSX.Element {
         <Link href="/" className="pointer-events-auto">
           <Image
             src="/images/logo.png"
-            alt="Alvynex"
-            width={160}
-            height={60}
-            className="h-12 w-auto"
+            alt="Alvynx"
+            width={120}
+            height={45}
+            className="h-9 w-auto"
             priority
           />
         </Link>

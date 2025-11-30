@@ -93,7 +93,7 @@ module.exports = {
 		},
 		backgroundImage: {
 			// All gradients now use inline styles for better control
-		},
+		  },
 		  
 		boxShadow: {
 		  'hero-glow': '0 0 28px rgba(255, 0, 20, 0.45), 0 0 56px rgba(255, 0, 20, 0.2)',

@@ -414,12 +414,12 @@ class Media {
       // Kick off loading with aggressive preload
       video.load();
     } else {
-      const img = new Image();
-      img.crossOrigin = 'anonymous';
-      img.src = this.image;
-      img.onload = () => {
+    const img = new Image();
+    img.crossOrigin = 'anonymous';
+    img.src = this.image;
+    img.onload = () => {
         this.texture.image = img;
-        this.program.uniforms.uImageSizes.value = [img.naturalWidth, img.naturalHeight];
+      this.program.uniforms.uImageSizes.value = [img.naturalWidth, img.naturalHeight];
         // Ensure first upload
         (this.texture as any).needsUpdate = true;
       };

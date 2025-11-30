@@ -13,7 +13,7 @@ const playfair = Playfair_Display({
 
 // === Metadata ===
 export const metadata: Metadata = {
-  title: "Alvynex",
+  title: "Alvynx",
   description: "Creative Content & Strategy Agency",
 }
 
